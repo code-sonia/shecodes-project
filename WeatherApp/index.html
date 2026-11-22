@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title> Weather App</title>
+  <link rel= "stylesheets" href= "index.css">
+   
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand"><div class="logo" aria-hidden="true">☀</div><div><h1>Skyline weather</h1><p class="eyebrow">Your daily outlook</p></div></div>
+      <div class="theme"><span>Appearance</span><button class="toggle" id="themeToggle" aria-label="Toggle dark mode"><span></span></button></div>
+    </header>
+    <form class="search" id="searchForm">
+      <label><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="cityInput" autocomplete="off" placeholder="Search a city…" aria-label="Search city"></label>
+      <button type="submit">Search</button>
+    </form>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+    <section class="hero" aria-label="Current weather">
+      <div><div class="location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="cityName">Accra, Ghana</span></div><p class="date" id="dateText"></p>
+        <div class="reading"><span class="weather-icon" id="weatherIcon">☀️</span><span class="temperature" id="temperature">28°</span><span class="unit">C</span></div><p class="condition" id="condition">Clear skies</p><p class="hi-low" id="hiLow">H 31° · L 25°</p>
+      </div>
+      <div class="metrics"><div class="metric"><span>Feels like</span><strong id="feels">30°</strong></div><div class="metric"><span>Wind</span><strong id="wind">14 km/h</strong></div><div class="metric"><span>Humidity</span><strong id="humidity">74%</strong></div></div>
+    </section>
+    <div class="section-head"><h2>5-day forecast</h2><span class="updated" id="updated">Updated just now</span></div>
+    <section class="forecast" id="forecast"></section>
+    <section class="details"><div class="detail"><div class="detail-label">Sunrise</div><div class="detail-value" id="sunrise">06:02 AM</div></div><div class="detail"><div class="detail-label">Sunset</div><div class="detail-value" id="sunset">06:10 PM</div></div><div class="detail"><div class="detail-label">UV index</div><div class="detail-value" id="uv">High · 7</div></div></section>
+    <footer>Data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a> · No sign-up required</footer>
+  </main>
+  <script src="index.js">
+  </script>
+</body>
+</html>
