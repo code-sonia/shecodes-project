@@ -1,0 +1,5 @@
+# Static HTML/CSS/JS site with no build step.
+# The site lives in WeatherApp/, so Netlify publishes that folder as-is.
+[build]
+  publish = "WeatherApp"
+  command = ""
